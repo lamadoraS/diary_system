@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+   
+    .bg-gradient {
+      background: linear-gradient(to right, #4a47a3, #2b5876);
+    }
+
+    .btn-gradient {
+      background: linear-gradient(to right, #2b5876, #4a47a3);
+    }
+  </style>
+</head>
+<body class="bg-gradient flex justify-center items-center h-screen">
+  <div class="login-container bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
+    <h2 class="text-2xl font-semibold mb-6 text-center text-gray-800">Login</h2>
+    <form action="http://localhost/diary_system/database/migrations/login.php" method="POST">
+      <div class="mb-4">
+        <input type="text" id="email_address" name="email_address" required placeholder="Email Address"
+               class="block w-full px-4 py-2 border rounded-md placeholder-gray-500 focus:outline-none focus:border-blue-500">
+      </div>
+      <div class="mb-4">
+        <input type="password" id="password" name="password" required placeholder="Password"
+               class="block w-full px-4 py-2 border rounded-md placeholder-gray-500 focus:outline-none focus:border-blue-500">
+      </div>
+      <button type="submit" class="w-full btn-gradient text-white px-4 py-2 rounded-md transition duration-300 hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+        Login
+      </button>
+    </form>
+    <p class="mt-8 text-xs font-light text-center text-gray-700"> Don't have an account? <a href="register.html"
+        class="font-medium text-purple-600 hover:underline">Register</a></p>
+  </div>
+</body>
+</html>
